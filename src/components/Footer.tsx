@@ -24,11 +24,21 @@ export default function Footer() {
                 <span className="sr-only">X (Twitter)</span>
                 <X />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a
+                href="https://github.com/SamuelRCrider/honorary-degrees"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
                 <span className="sr-only">Github</span>
                 <Github />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a
+                href="mailto:samrobertcrider@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
                 <span className="sr-only">Email</span>
                 <Mail />
               </a>
