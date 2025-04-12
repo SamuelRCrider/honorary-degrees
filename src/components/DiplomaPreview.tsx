@@ -5,11 +5,11 @@ export default function DiplomaPreview() {
 
   return (
     <div className="p-2">
-      <div className="max-w-3xl mx-auto bg-cream border-8 border-double border-gold p-8 font-serif text-center bg-[#fffbf0]">
-        <div className="border-4 border-double border-[#d4af37] p-6">
+      <div className="mx-auto bg-cream border-8 border-double border-gold p-4 sm:p-8 font-serif text-center bg-[#fffbf0] max-w-full overflow-hidden">
+        <div className="border-4 border-double border-[#d4af37] p-2 sm:p-6">
           <div className="flex justify-center mb-4">
             <svg
-              className="h-16 w-16 text-[#d4af37]"
+              className="h-12 w-12 sm:h-16 sm:w-16 text-[#d4af37]"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -27,26 +27,26 @@ export default function DiplomaPreview() {
             {university || "PRESTIGIOUS UNIVERSITY"}
           </div>
 
-          <div className="text-3xl font-bold mb-2 text-[#8a7825]">
+          <div className="text-2xl sm:text-3xl font-bold mb-2 text-[#8a7825]">
             HONORARY DEGREE
           </div>
 
-          <div className="text-xl mb-6 italic text-[#8a7825]">
+          <div className="text-lg sm:text-xl mb-6 italic text-[#8a7825]">
             {title || "Doctor of Humane Letters"}
           </div>
 
           <div className="mb-2 text-[#594e18]">This certifies that</div>
 
-          <div className="text-2xl font-bold mb-4 text-[#3a3112]">
+          <div className="text-xl sm:text-2xl font-bold mb-4 text-[#3a3112]">
             {name || "Your Name"}
           </div>
 
-          <div className="mb-6 text-sm leading-relaxed px-8 text-[#594e18]">
+          <div className="mb-6 text-xs sm:text-sm leading-relaxed px-2 sm:px-8 text-[#594e18]">
             {description ||
               "Having demonstrated exceptional achievement and contribution to society, is hereby awarded this honorary degree with all rights, privileges and honors thereunto appertaining."}
           </div>
 
-          <div className="mb-6 text-sm text-[#594e18]">
+          <div className="mb-6 text-xs sm:text-sm text-[#594e18]">
             Conferred on the{" "}
             {date
               ? new Date(date).toLocaleDateString("en-US", {
@@ -59,15 +59,15 @@ export default function DiplomaPreview() {
 
           <div className="flex justify-around mt-8">
             <div className="text-center">
-              <div className="border-t border-[#d4af37] pt-2 w-40">
-                <div className="text-sm font-bold text-[#8a7825]">
+              <div className="border-t border-[#d4af37] pt-2 w-24 sm:w-40">
+                <div className="text-xs sm:text-sm font-bold text-[#8a7825]">
                   University President
                 </div>
               </div>
             </div>
             <div className="text-center">
-              <div className="border-t border-[#d4af37] pt-2 w-40">
-                <div className="text-sm font-bold text-[#8a7825]">
+              <div className="border-t border-[#d4af37] pt-2 w-24 sm:w-40">
+                <div className="text-xs sm:text-sm font-bold text-[#8a7825]">
                   Board of Trustees
                 </div>
               </div>

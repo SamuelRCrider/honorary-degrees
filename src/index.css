@@ -15,20 +15,41 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Fixed sticky header styles */
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+
 a {
   font-weight: 500;
-  color: #646cff;
+  color: white;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  display: block;
   min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f3f2ef;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -56,6 +77,42 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make containers responsive */
+.container {
+  width: 100%;
+  max-width: 1128px;
+  overflow-x: hidden;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* LinkedIn-like containers */
+.max-w-5xl {
+  max-width: 1128px; /* LinkedIn's content width */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+section {
+  width: 100%;
+}
+
+/* Adjust the inner content within sections */
+section > div {
+  max-width: 1128px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -66,5 +123,24 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* Responsive media queries */
+@media (max-width: 1128px) {
+  .max-w-5xl {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }

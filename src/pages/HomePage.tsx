@@ -1,29 +1,29 @@
+import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
     <>
       <section className="bg-gradient-to-r from-indigo-600 to-blue-500 text-white">
-        <div className="container mx-auto px-4 py-20">
+        <div className="max-w-5xl mx-auto px-4 py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Your Academic Achievement, Made Official
               </h1>
               <p className="text-xl mb-8">
-                Create your own prestigious honorary degree from the world's
-                finest institutions. Celebrate your expertise and
-                accomplishments.
+                Create your own prestigious degree from the world's finest
+                institution. Celebrate your expertise and accomplishments.
               </p>
               <Link
                 to="/create"
-                className="inline-block py-3 px-8 bg-white text-indigo-600 font-bold rounded-lg shadow-lg hover:bg-gray-100 transition duration-200"
+                className="inline-block py-3 px-8 bg-white text-blue-600! font-black rounded-lg shadow-lg hover:bg-gray-100 transition duration-200"
               >
                 Create Your Degree
               </Link>
             </div>
             <div className="flex justify-center">
-              <div className="relative">
+              <div className="relative max-w-full">
                 <div className="absolute inset-0 bg-white rounded-lg opacity-10 transform rotate-3"></div>
                 <div className="border-8 border-white bg-cream p-8 rounded-lg shadow-xl relative bg-[#fffbf0]">
                   <div className="border-4 border-double border-[#d4af37] p-6 text-center">
@@ -54,13 +54,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
             How It Works
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
               <div className="bg-indigo-100 text-indigo-700 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mb-4">
                 1
               </div>
@@ -72,7 +72,7 @@ export default function HomePage() {
                 personalized description of your accomplishments.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
               <div className="bg-indigo-100 text-indigo-700 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mb-4">
                 2
               </div>
@@ -84,7 +84,7 @@ export default function HomePage() {
                 honorary degree, making it sound prestigious and official.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
               <div className="bg-indigo-100 text-indigo-700 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mb-4">
                 3
               </div>
@@ -100,8 +100,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-gray-100">
+        <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-3 text-gray-800">
             Premium Quality Diplomas
           </h2>
@@ -111,92 +111,42 @@ export default function HomePage() {
             by prestigious universities.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-xl font-bold mb-4 text-gray-800">Features</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-green-500 mr-2 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Premium 210gsm parchment paper</span>
+                  <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span className="text-gray-600">
+                    Premium 210gsm parchment paper
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-green-500 mr-2 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Elegant gold foil embossing</span>
+                  <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span className="text-gray-600">
+                    Elegant gold foil embossing
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-green-500 mr-2 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Official university seal</span>
+                  <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span className="text-gray-600">
+                    Official university seal
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-green-500 mr-2 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Professional calligraphy</span>
+                  <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span className="text-gray-600">
+                    Professional calligraphy
+                  </span>
                 </li>
                 <li className="flex items-start">
-                  <svg
-                    className="h-5 w-5 text-green-500 mr-2 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  <span>Protective shipping tube included</span>
+                  <Check className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                  <span className="text-gray-600">
+                    Protective shipping tube included
+                  </span>
                 </li>
               </ul>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-xl font-bold mb-4 text-gray-800">
                 Testimonials
               </h3>
@@ -207,7 +157,7 @@ export default function HomePage() {
                       JD
                     </div>
                     <div>
-                      <div className="font-medium">John D.</div>
+                      <div className="font-medium text-gray-800">John D.</div>
                       <div className="text-sm text-gray-500">
                         Los Angeles, CA
                       </div>
@@ -224,7 +174,7 @@ export default function HomePage() {
                       SM
                     </div>
                     <div>
-                      <div className="font-medium">Sarah M.</div>
+                      <div className="font-medium text-gray-800">Sarah M.</div>
                       <div className="text-sm text-gray-500">New York, NY</div>
                     </div>
                   </div>
@@ -241,7 +191,7 @@ export default function HomePage() {
       </section>
 
       <section className="py-16 bg-indigo-100">
-        <div className="container mx-auto px-4 text-center">
+        <div className="max-w-5xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-indigo-800">
             Ready to Create Your Honorary Degree?
           </h2>
