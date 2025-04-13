@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
-import { createPaymentIntent } from "../lib/stripe";
 import { useNavigate } from "react-router-dom";
 import Button from "./common/Button";
 
@@ -48,7 +47,7 @@ export default function PaymentForm() {
 
     try {
       // In a real app, you'd call your backend to create a PaymentIntent
-      const clientSecret = await createPaymentIntent(149);
+      // const clientSecret = await createPaymentIntent(149);
 
       // For demo purposes, we're just simulating the payment process
       setTimeout(() => {

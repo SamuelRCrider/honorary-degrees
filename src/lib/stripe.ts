@@ -7,7 +7,7 @@ const STRIPE_PUBLIC_KEY =
 
 export const stripePromise = loadStripe(STRIPE_PUBLIC_KEY);
 
-export const createPaymentIntent = async (amount: number): Promise<string> => {
+export const createPaymentIntent = async (_: number): Promise<string> => {
   // In a real app, this would call your backend to create a payment intent
   // For demo purposes, we'll simulate a successful response
   return new Promise((resolve) => {

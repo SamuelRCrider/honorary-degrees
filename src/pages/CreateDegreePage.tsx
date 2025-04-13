@@ -5,7 +5,7 @@ import DiplomaPreview from "../components/DiplomaPreview";
 import AIDescriptionGenerator from "../components/AIDescriptionGenerator";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../components/common/Button";
-import { ArrowBigRight, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function CreateDegreePage() {
   const navigate = useNavigate();
