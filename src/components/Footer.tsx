@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="text-center">
             <h3 className="text-xl font-semibold text-white mb-4 text-center">
-              Prestige Degrees
+              Margarita Tech
             </h3>
             <p className="mb-4">
               Creating prestigious degrees for distinguished individuals since
@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p>
-            &copy; {new Date().getFullYear()} Prestige Degrees. All rights
+            &copy; {new Date().getFullYear()} Margarita Tech. All rights
             reserved.
           </p>
         </div>

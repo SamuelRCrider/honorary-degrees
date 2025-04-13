@@ -5,6 +5,7 @@ import DiplomaPreview from "../components/DiplomaPreview";
 import AIDescriptionGenerator from "../components/AIDescriptionGenerator";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../components/common/Button";
+import { ArrowBigRight, ArrowRight } from "lucide-react";
 
 export default function CreateDegreePage() {
   const navigate = useNavigate();
@@ -132,7 +133,7 @@ export default function CreateDegreePage() {
                             <input
                               id="name"
                               type="text"
-                              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all"
+                              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-black!"
                               placeholder="e.g., John Smith"
                               value={name}
                               onChange={(e) => setName(e.target.value)}
@@ -150,7 +151,7 @@ export default function CreateDegreePage() {
                             <input
                               id="title"
                               type="text"
-                              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all"
+                              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-black!"
                               placeholder="e.g., Doctor of Humane Letters"
                               value={title}
                               onChange={(e) => setTitle(e.target.value)}
@@ -168,7 +169,7 @@ export default function CreateDegreePage() {
                             <input
                               id="trustee"
                               type="text"
-                              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all"
+                              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-black!"
                               placeholder="e.g., Dr. Jane Smith"
                               value={trustee}
                               onChange={(e) => setTrustee(e.target.value)}
@@ -190,7 +191,7 @@ export default function CreateDegreePage() {
                           </p>
                           <textarea
                             id="description"
-                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all min-h-[240px]"
+                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all min-h-[240px] text-black!"
                             placeholder="e.g., Having demonstrated exceptional achievement and contribution to society..."
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
@@ -203,22 +204,7 @@ export default function CreateDegreePage() {
                         <Button
                           type="button"
                           variant="secondary"
-                          icon={
-                            <svg
-                              className="w-4 h-4"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M9 5l7 7-7 7"
-                              ></path>
-                            </svg>
-                          }
+                          icon={<ArrowRight />}
                           onClick={() => setActiveTab("description")}
                         >
                           Try AI Description
@@ -267,22 +253,7 @@ export default function CreateDegreePage() {
                     <div className="mt-8 flex justify-end">
                       <Button
                         variant="primary"
-                        icon={
-                          <svg
-                            className="w-5 h-5"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        }
+                        icon={<ArrowRight />}
                         onClick={() => navigate("/checkout")}
                       >
                         Continue to Checkout

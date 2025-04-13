@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useDegreeStore } from "../store/useDegreeStore";
 import DiplomaPreview from "../components/DiplomaPreview";
 import Button from "../components/common/Button";
+import { Check } from "lucide-react";
 
 export default function SuccessPage() {
   const { name, reset } = useDegreeStore();
@@ -11,19 +12,7 @@ export default function SuccessPage() {
       <div className="max-w-3xl mx-auto text-center">
         <div className="mb-8">
           <div className="inline-flex h-24 w-24 items-center justify-center rounded-full bg-green-100 mb-6">
-            <svg
-              className="h-12 w-12 text-green-600"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M5 13l4 4L19 7"
-              />
-            </svg>
+            <Check className="text-green-600 h-12 w-12" />
           </div>
           <h1 className="text-4xl font-bold mb-4 text-gray-800">
             Order Successful!
@@ -98,7 +87,7 @@ export default function SuccessPage() {
           </p>
           <p className="mt-1">
             Need assistance? Contact our customer support at
-            support@prestigedegrees.com
+            support@margaritatech.com
           </p>
         </div>
       </div>

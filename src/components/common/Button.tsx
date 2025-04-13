@@ -39,7 +39,7 @@ const Button = ({
 }: ButtonProps) => {
   // Base styles
   let baseStyles =
-    "font-medium transition-all focus:outline-none inline-flex items-center justify-center";
+    "font-medium transition-all focus:outline-none inline-flex items-center justify-center hover:cursor-pointer";
 
   // Size styles
   const sizeStyles = {

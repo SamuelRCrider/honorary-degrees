@@ -132,7 +132,7 @@ export default function PaymentForm() {
                 type="text"
                 placeholder="Jane Doe"
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-black!"
                 value={billingDetails.name}
                 onChange={(e) =>
                   setBillingDetails({ ...billingDetails, name: e.target.value })
@@ -152,7 +152,7 @@ export default function PaymentForm() {
                 type="email"
                 placeholder="jane.doe@example.com"
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-black!"
                 value={billingDetails.email}
                 onChange={(e) =>
                   setBillingDetails({
@@ -175,7 +175,7 @@ export default function PaymentForm() {
                 type="text"
                 placeholder="123 Main St"
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-black!"
                 value={billingDetails.address.line1}
                 onChange={(e) =>
                   setBillingDetails({
@@ -202,7 +202,7 @@ export default function PaymentForm() {
                   type="text"
                   placeholder="San Francisco"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-black!"
                   value={billingDetails.address.city}
                   onChange={(e) =>
                     setBillingDetails({
@@ -227,7 +227,7 @@ export default function PaymentForm() {
                   type="text"
                   placeholder="CA"
                   required
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-black!"
                   value={billingDetails.address.state}
                   onChange={(e) =>
                     setBillingDetails({
@@ -254,7 +254,7 @@ export default function PaymentForm() {
                 type="text"
                 placeholder="94103"
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-black!"
                 value={billingDetails.address.postal_code}
                 onChange={(e) =>
                   setBillingDetails({

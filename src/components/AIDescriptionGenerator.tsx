@@ -50,7 +50,7 @@ export default function AIDescriptionGenerator() {
         </label>
         <textarea
           id="prompt"
-          className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+          className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-black!"
           rows={3}
           placeholder="e.g., Create a description for an honorary doctorate in environmental science for someone who has worked on climate change initiatives"
           value={prompt}
