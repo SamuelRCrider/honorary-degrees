@@ -6,11 +6,11 @@ interface DegreeState {
   description: string;
   university: string;
   date: string;
+  trustee: string;
   setName: (name: string) => void;
   setTitle: (title: string) => void;
   setDescription: (description: string) => void;
-  setUniversity: (university: string) => void;
-  setDate: (date: string) => void;
+  setTrustee: (trustee: string) => void;
   reset: () => void;
 }
 
@@ -18,19 +18,20 @@ export const useDegreeStore = create<DegreeState>((set) => ({
   name: "",
   title: "",
   description: "",
-  university: "",
+  university: "Margarita Tech",
   date: new Date().toISOString().split("T")[0],
+  trustee: "",
   setName: (name) => set({ name }),
   setTitle: (title) => set({ title }),
   setDescription: (description) => set({ description }),
-  setUniversity: (university) => set({ university }),
-  setDate: (date) => set({ date }),
+  setTrustee: (trustee) => set({ trustee }),
   reset: () =>
     set({
       name: "",
       title: "",
       description: "",
-      university: "",
+      university: "Margarita Tech",
       date: new Date().toISOString().split("T")[0],
+      trustee: "",
     }),
 }));

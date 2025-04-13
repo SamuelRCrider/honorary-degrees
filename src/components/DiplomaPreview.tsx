@@ -1,30 +1,29 @@
 import { useDegreeStore } from "../store/useDegreeStore";
 
 export default function DiplomaPreview() {
-  const { name, title, description, university, date } = useDegreeStore();
+  const { name, title, description, university, trustee } = useDegreeStore();
+
+  // Always use current date for display
+  const currentDate = new Date().toLocaleDateString("en-US", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
 
   return (
     <div className="p-2">
       <div className="mx-auto bg-cream border-8 border-double border-gold p-4 sm:p-8 font-serif text-center bg-[#fffbf0] max-w-full overflow-hidden">
         <div className="border-4 border-double border-[#d4af37] p-2 sm:p-6">
           <div className="flex justify-center mb-4">
-            <svg
-              className="h-12 w-12 sm:h-16 sm:w-16 text-[#d4af37]"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M12 3L4 7V8L12 12L20 8V7L12 3Z" fill="currentColor" />
-              <path
-                d="M4 9V17L6 16V10L12 14L18 10V16L20 17V9L12 13L4 9Z"
-                fill="currentColor"
-              />
-              <path d="M7 19H17V21H7V19Z" fill="currentColor" />
-            </svg>
+            <img
+              src="../assets/images/cocktail.png"
+              alt="Cocktail"
+              className="h-12 w-12 sm:h-16 sm:w-16"
+            />
           </div>
 
           <div className="uppercase text-xs tracking-widest mb-4 text-[#8a7825]">
-            {university || "PRESTIGIOUS UNIVERSITY"}
+            {university}
           </div>
 
           <div className="text-2xl sm:text-3xl font-bold mb-2 text-[#8a7825]">
@@ -47,29 +46,30 @@ export default function DiplomaPreview() {
           </div>
 
           <div className="mb-6 text-xs sm:text-sm text-[#594e18]">
-            Conferred on the{" "}
-            {date
-              ? new Date(date).toLocaleDateString("en-US", {
-                  day: "numeric",
-                  month: "long",
-                  year: "numeric",
-                })
-              : "1st day of January, 2023"}
+            Conferred on {currentDate}
           </div>
 
           <div className="flex justify-around mt-8">
             <div className="text-center">
-              <div className="border-t border-[#d4af37] pt-2 w-24 sm:w-40">
-                <div className="text-xs sm:text-sm font-bold text-[#8a7825]">
-                  University President
-                </div>
+              <div className="text-xs sm:text-sm font-bold pb-2 text-[#8a7825]">
+                Matthew Zegil
+              </div>
+              <div className="border-t border-[#d4af37] w-24 sm:w-40"></div>
+              <div className="text-xs sm:text-sm font-bold text-[#8a7825]">
+                University President
               </div>
             </div>
             <div className="text-center">
-              <div className="border-t border-[#d4af37] pt-2 w-24 sm:w-40">
-                <div className="text-xs sm:text-sm font-bold text-[#8a7825]">
-                  Board of Trustees
-                </div>
+              <div
+                className={`text-xs sm:text-sm font-bold pb-2 text-[#8a7825] ${
+                  !trustee ? "opacity-0" : ""
+                }`}
+              >
+                {trustee || "Matthew Zegil"}
+              </div>
+              <div className="border-t border-[#d4af37] w-24 sm:w-40"></div>
+              <div className="text-xs sm:text-sm font-bold text-[#8a7825]">
+                Board of Trustees
               </div>
             </div>
           </div>

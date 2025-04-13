@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useDegreeStore } from "../store/useDegreeStore";
 import DiplomaPreview from "../components/DiplomaPreview";
+import Button from "../components/common/Button";
 
 export default function SuccessPage() {
   const { name, reset } = useDegreeStore();
@@ -80,20 +81,12 @@ export default function SuccessPage() {
         </div>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Link
-            to="/"
-            className="py-2 px-6 bg-indigo-600 text-white font-medium rounded-md shadow hover:bg-indigo-700 transition duration-150 ease-in-out"
-            onClick={reset}
-          >
+          <Button variant="primary" as={Link} to="/" onClick={reset}>
             Return Home
-          </Link>
-          <Link
-            to="/create"
-            className="py-2 px-6 border border-indigo-600 text-indigo-600 font-medium rounded-md hover:bg-indigo-50 transition duration-150 ease-in-out"
-            onClick={reset}
-          >
+          </Button>
+          <Button variant="secondary" as={Link} to="/create" onClick={reset}>
             Create Another Degree
-          </Link>
+          </Button>
         </div>
 
         <div className="mt-8 text-sm text-gray-600">

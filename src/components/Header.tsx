@@ -7,7 +7,7 @@ export default function Header() {
       <div className="max-w-5xl mx-auto px-4 py-2 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3">
           <GraduationCap className="h-10 w-10" />
-          <span className="font-serif text-xl font-bold">Prestige Degrees</span>
+          <span className="font-serif text-xl font-bold">Margarita Tech</span>
         </Link>
         <nav className="hidden md:flex space-x-8">
           <Link to="/" className="hover:text-blue-100 font-medium">

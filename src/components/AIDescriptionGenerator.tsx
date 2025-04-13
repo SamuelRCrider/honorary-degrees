@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { generateDescription } from "../lib/openai";
 import { useDegreeStore } from "../store/useDegreeStore";
+import Button from "./common/Button";
 
 export default function AIDescriptionGenerator() {
   const [prompt, setPrompt] = useState("");
@@ -63,13 +64,14 @@ export default function AIDescriptionGenerator() {
         </div>
       )}
 
-      <button
-        className="w-full py-2 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-md shadow transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 disabled:opacity-50"
-        onClick={handleGenerateDescription}
+      <Button
+        variant="primary"
+        fullWidth
         disabled={isLoading || !prompt.trim()}
+        onClick={handleGenerateDescription}
       >
         {isLoading ? "Generating..." : "Generate Description"}
-      </button>
+      </Button>
 
       <div className="mt-4 text-sm text-gray-500">
         <p>

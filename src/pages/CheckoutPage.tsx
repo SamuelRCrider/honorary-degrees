@@ -5,13 +5,14 @@ import PaymentForm from "../components/PaymentForm";
 import DiplomaPreview from "../components/DiplomaPreview";
 import { useDegreeStore } from "../store/useDegreeStore";
 import { Link } from "react-router-dom";
+import Button from "../components/common/Button";
 
 export default function CheckoutPage() {
   const [viewMode, setViewMode] = useState("split");
-  const { name, title, university } = useDegreeStore();
+  const { name, title } = useDegreeStore();
 
   // Check if degree information is filled out
-  const isInfoComplete = name && title && university;
+  const isInfoComplete = name && title;
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -65,14 +66,17 @@ export default function CheckoutPage() {
                     Degree Preview
                   </h2>
                   <div className="flex space-x-2">
-                    <button
-                      className={`p-1 rounded ${
+                    <Button
+                      variant="text"
+                      size="small"
+                      className={`p-1 ${
                         viewMode === "split"
                           ? "bg-indigo-100 text-indigo-600"
                           : "text-gray-500 hover:text-gray-700"
                       }`}
                       onClick={() => setViewMode("split")}
                       title="Split View"
+                      withAnimation={false}
                     >
                       <svg
                         className="h-5 w-5"
@@ -87,15 +91,18 @@ export default function CheckoutPage() {
                           d="M4 6h16M4 12h16M4 18h7"
                         />
                       </svg>
-                    </button>
-                    <button
-                      className={`p-1 rounded ${
+                    </Button>
+                    <Button
+                      variant="text"
+                      size="small"
+                      className={`p-1 ${
                         viewMode === "full"
                           ? "bg-indigo-100 text-indigo-600"
                           : "text-gray-500 hover:text-gray-700"
                       }`}
                       onClick={() => setViewMode("full")}
                       title="Full Preview"
+                      withAnimation={false}
                     >
                       <svg
                         className="h-5 w-5"
@@ -110,7 +117,7 @@ export default function CheckoutPage() {
                           d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
                         />
                       </svg>
-                    </button>
+                    </Button>
                   </div>
                 </div>
                 <div

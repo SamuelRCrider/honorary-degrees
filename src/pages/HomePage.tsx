@@ -1,10 +1,11 @@
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
+import Button from "../components/common/Button";
 
 export default function HomePage() {
   return (
     <>
-      <section className="bg-gradient-to-r from-indigo-600 to-blue-500 text-white">
+      <section className="bg-gradient-to-r from-indigo-600 to-blue-500">
         <div className="max-w-5xl mx-auto px-4 py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
@@ -12,15 +13,20 @@ export default function HomePage() {
                 Your Academic Achievement, Made Official
               </h1>
               <p className="text-xl mb-8">
-                Create your own prestigious degree from the world's finest
-                institution. Celebrate your expertise and accomplishments.
+                Create your own honorary degree from the world's finest
+                institution, Margarita Tech. Celebrate your expertise and
+                accomplishments!
               </p>
-              <Link
+              <Button
+                variant="secondary"
+                textColor="blue-500"
+                size="large"
+                className="font-black shadow-lg"
+                as={Link}
                 to="/create"
-                className="inline-block py-3 px-8 bg-white text-blue-600! font-black rounded-lg shadow-lg hover:bg-gray-100 transition duration-200"
               >
                 Create Your Degree
-              </Link>
+              </Button>
             </div>
             <div className="flex justify-center">
               <div className="relative max-w-full">
@@ -28,7 +34,7 @@ export default function HomePage() {
                 <div className="border-8 border-white bg-cream p-8 rounded-lg shadow-xl relative bg-[#fffbf0]">
                   <div className="border-4 border-double border-[#d4af37] p-6 text-center">
                     <div className="uppercase text-xs tracking-widest mb-3 text-[#8a7825]">
-                      PRESTIGIOUS UNIVERSITY
+                      MARGARITA TECH
                     </div>
                     <div className="text-2xl font-bold mb-2 text-[#8a7825]">
                       HONORARY DEGREE
@@ -68,8 +74,8 @@ export default function HomePage() {
                 Design Your Degree
               </h3>
               <p className="text-gray-600">
-                Choose your degree title, university name, and add a
-                personalized description of your accomplishments.
+                Choose your degree title and add a personalized description of
+                your accomplishments.
               </p>
             </div>
             <div className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
@@ -165,7 +171,8 @@ export default function HomePage() {
                   </div>
                   <p className="text-gray-600 text-sm">
                     "My honorary doctorate in Quantum Physics looks amazing! My
-                    friends can't believe it's not from a real university."
+                    friends can't believe it's not from a real university like
+                    Margarita Tech."
                   </p>
                 </div>
                 <div className="bg-white p-4 rounded shadow-sm">
@@ -199,12 +206,15 @@ export default function HomePage() {
             Join thousands of satisfied customers who have recognized their own
             accomplishments with our custom honorary degrees.
           </p>
-          <Link
+          <Button
+            variant="primary"
+            size="large"
+            className="font-bold shadow-lg"
+            as={Link}
             to="/create"
-            className="inline-block py-3 px-8 bg-indigo-600 text-white font-bold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-200"
           >
             Get Started Now
-          </Link>
+          </Button>
         </div>
       </section>
     </>

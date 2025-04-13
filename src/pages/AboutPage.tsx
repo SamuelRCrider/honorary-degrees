@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "../components/common/Button";
 
 export default function AboutPage() {
   return (
@@ -71,12 +72,15 @@ export default function AboutPage() {
           </p>
 
           <div className="mt-8 text-center">
-            <Link
+            <Button
+              variant="primary"
+              size="medium"
+              className="shadow-md"
+              as={Link}
               to="/create"
-              className="inline-block py-3 px-8 bg-indigo-600 text-white font-medium rounded-lg shadow-md hover:bg-indigo-700 transition duration-150 ease-in-out"
             >
               Create Your Degree
-            </Link>
+            </Button>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { createPaymentIntent } from "../lib/stripe";
 import { useNavigate } from "react-router-dom";
+import Button from "./common/Button";
 
 export default function PaymentForm() {
   const [error, setError] = useState<string | null>(null);
@@ -317,13 +318,14 @@ export default function PaymentForm() {
               </div>
             )}
 
-            <button
+            <Button
               type="submit"
+              variant="primary"
+              fullWidth
               disabled={!stripe || processing}
-              className="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-md shadow transition duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 disabled:opacity-50"
             >
               {processing ? "Processing..." : "Pay $149.00"}
-            </button>
+            </Button>
 
             <div className="mt-4 text-center text-sm text-gray-500">
               <p>Your payment is secure and encrypted</p>
