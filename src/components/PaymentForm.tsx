@@ -2,12 +2,14 @@ import { useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { useNavigate } from "react-router-dom";
 import Button from "./common/Button";
+import { useToast } from "./common/Toast";
 
 export default function PaymentForm() {
   const [error, setError] = useState<string | null>(null);
   const [processing, setProcessing] = useState(false);
   const [success, setSuccess] = useState(false);
   const [cardComplete, setCardComplete] = useState(false);
+  const toast = useToast();
 
   const [billingDetails, setBillingDetails] = useState({
     name: "",
@@ -322,6 +324,10 @@ export default function PaymentForm() {
               variant="primary"
               fullWidth
               disabled={!stripe || processing}
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
+                e.preventDefault();
+                toast.error("This feature is not available yet.");
+              }}
             >
               {processing ? "Processing..." : "Pay $149.00"}
             </Button>
